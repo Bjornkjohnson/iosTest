@@ -10,4 +10,11 @@
 
 @interface AnimationSectionViewController : UIViewController
 
+- (IBAction)spin:(id)sender;
+- (IBAction)drag:(UIPanGestureRecognizer *)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *icon;
+//@property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *iconDrag;
+@property (weak, nonatomic) IBOutlet UIImageView *explosion;
+
+
 @end

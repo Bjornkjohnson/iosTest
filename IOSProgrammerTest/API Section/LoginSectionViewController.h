@@ -10,4 +10,12 @@
 
 @interface LoginSectionViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *username;
+@property (strong, nonatomic) IBOutlet UITextField *password;
+
+
+@property (strong, nonatomic) NSDate *startRequest;
+@property (strong, nonatomic) NSDate *finishRequest;
+@property (nonatomic) NSTimeInterval totalTime;
+
 @end

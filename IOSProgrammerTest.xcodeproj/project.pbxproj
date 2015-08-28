@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1862FE9B1B8C9D1F00C4D44F /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 1862FE9A1B8C9D1F00C4D44F /* fonts */; };
+		18811E851B8FF891003712C3 /* Jelloween - Machinato Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18811E841B8FF891003712C3 /* Jelloween - Machinato Light.ttf */; };
+		18811E871B8FF898003712C3 /* Jelloween - Machinato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18811E861B8FF898003712C3 /* Jelloween - Machinato.ttf */; };
 		442EA5E71A44A6ED00CEB3CB /* ChatData.m in Sources */ = {isa = PBXBuildFile; fileRef = 442EA5E61A44A6ED00CEB3CB /* ChatData.m */; };
 		4434B5B61A3FBB7100687081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434B5B51A3FBB7100687081 /* main.m */; };
 		4434B5B91A3FBB7100687081 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434B5B81A3FBB7100687081 /* AppDelegate.m */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		1862FE9A1B8C9D1F00C4D44F /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		18811E841B8FF891003712C3 /* Jelloween - Machinato Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Jelloween - Machinato Light.ttf"; path = "IOSProgrammerTest/fonts/Jelloween - Machinato Light.ttf"; sourceTree = "<group>"; };
+		18811E861B8FF898003712C3 /* Jelloween - Machinato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Jelloween - Machinato.ttf"; path = "IOSProgrammerTest/fonts/Jelloween - Machinato.ttf"; sourceTree = "<group>"; };
 		442EA5E51A44A6ED00CEB3CB /* ChatData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatData.h; sourceTree = "<group>"; };
 		442EA5E61A44A6ED00CEB3CB /* ChatData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatData.m; sourceTree = "<group>"; };
 		4434B5B01A3FBB7100687081 /* IOSProgrammerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSProgrammerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +94,8 @@
 		4434B5A71A3FBB7100687081 = {
 			isa = PBXGroup;
 			children = (
+				18811E861B8FF898003712C3 /* Jelloween - Machinato.ttf */,
+				18811E841B8FF891003712C3 /* Jelloween - Machinato Light.ttf */,
 				4434B5B21A3FBB7100687081 /* IOSProgrammerTest */,
 				4434B5CC1A3FBB7100687081 /* IOSProgrammerTestTests */,
 				4434B5B11A3FBB7100687081 /* Products */,
@@ -293,6 +299,8 @@
 				1862FE9B1B8C9D1F00C4D44F /* fonts in Resources */,
 				DC932C1B1A40A50A000035B7 /* LoginSectionViewController.xib in Resources */,
 				DC932C3C1A41FDC9000035B7 /* chatData.json in Resources */,
+				18811E851B8FF891003712C3 /* Jelloween - Machinato Light.ttf in Resources */,
+				18811E871B8FF898003712C3 /* Jelloween - Machinato.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

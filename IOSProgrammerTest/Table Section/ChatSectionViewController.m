@@ -10,11 +10,12 @@
 #import "MainMenuViewController.h"
 #import "ChatCell.h"
 
-#define TABLE_CELL_HEIGHT 45.0f
+#define TABLE_CELL_HEIGHT 100.0f
 
 @interface ChatSectionViewController ()
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *loadedChatData;
+@property (nonatomic, strong) ChatCell *cell;
 @end
 
 @implementation ChatSectionViewController
@@ -25,6 +26,10 @@
     
     self.loadedChatData = [[NSMutableArray alloc] init];
     [self loadJSONData];
+    
+    
+    
+    
 }
 
 - (void)loadJSONData
@@ -72,20 +77,22 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *cellIdentifier = @"ChatCell";
-    ChatCell *cell = nil;
+    self.cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    //ChatCell *cell = nil;
 
-    if (cell == nil)
+    if (self.cell == nil)
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
-        cell = (ChatCell *)[nib objectAtIndex:0];
+        self.cell = (ChatCell *)[nib objectAtIndex:0];
     }
 
     ChatData *chatData = [self.loadedChatData objectAtIndex:[indexPath row]];
 
-    [cell loadWithData:chatData];
+    [self.cell loadWithData:chatData];
 
-    return cell;
+    return self.cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -97,6 +104,19 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return TABLE_CELL_HEIGHT;
+    
+    //NSLog(@"%@",self.cell.contentView);
+    [self.cell layoutIfNeeded];
+    
+    CGFloat height = [self.cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    NSLog(@"%f",height);
+    
+    return height;
 }
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewAutomaticDimension;
+}
+
+
 @end

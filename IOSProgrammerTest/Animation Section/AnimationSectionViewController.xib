@@ -3,9 +3,19 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Jelloween - Machinato Light.ttf">
+            <string>Machinato-Light</string>
+        </mutableArray>
+        <mutableArray key="Jelloween - Machinato.ttf">
+            <string>Machinato</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationSectionViewController">
             <connections>
+                <outlet property="explosion" destination="wAG-PC-M24" id="kL5-Fb-NcW"/>
+                <outlet property="icon" destination="O3R-IT-wae" id="nir-Eb-tql"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,21 +27,66 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_animation" translatesAutoresizingMaskIntoConstraints="NO" id="08G-pP-9QH">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbj-IL-RFt">
-                    <rect key="frame" x="8" y="8" width="58" height="30"/>
-                    <state key="normal" title="Back">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rqm-1o-cXH">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHs-38-SFg">
+                            <rect key="frame" x="110" y="32" width="100" height="24"/>
+                            <fontDescription key="fontDescription" name="Machinato-Light" family="Machinato" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSK-20-ezJ">
+                            <rect key="frame" x="0.0" y="23" width="41" height="41"/>
+                            <state key="normal" image="btn_back">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="4GV-My-xAh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.17254901959999999" green="0.27058823529999998" blue="0.33725490200000002" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le4-Os-ZKY">
+                    <rect key="frame" x="38" y="464" width="245" height="56"/>
+                    <state key="normal" image="btn_bg_spin">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="smt-Qj-UGc"/>
+                        <action selector="spin:" destination="-1" eventType="touchUpInside" id="AZn-oA-zGr"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgT-uC-bUB">
+                    <rect key="frame" x="138" y="478" width="45" height="27"/>
+                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gpc_logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="O3R-IT-wae">
+                    <rect key="frame" x="85" y="182" width="150" height="150"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="zls-Ws-ZEB" appends="YES" id="Woz-PS-mvd"/>
+                    </connections>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wAG-PC-M24">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.17254901959999999" green="0.27058823529999998" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="zls-Ws-ZEB">
+            <connections>
+                <action selector="drag:" destination="-1" id="U5E-QH-kQb"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="bg_animation" width="320" height="568"/>
+        <image name="btn_back" width="41" height="41"/>
+        <image name="btn_bg_spin" width="245" height="56"/>
+        <image name="gpc_logo_icon" width="140" height="132"/>
     </resources>
 </document>

@@ -3,9 +3,21 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Jelloween - Machinato Light.ttf">
+            <string>Machinato-Light</string>
+        </mutableArray>
+        <mutableArray key="Jelloween - Machinato.ttf">
+            <string>Machinato</string>
+            <string>Machinato</string>
+            <string>Machinato</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginSectionViewController">
             <connections>
+                <outlet property="password" destination="QZG-Jg-EBP" id="de0-oI-0zh"/>
+                <outlet property="username" destination="UJ2-Zl-UMQ" id="khL-xQ-VCB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,15 +29,55 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_login" translatesAutoresizingMaskIntoConstraints="NO" id="p7o-Bt-BHb">
                     <rect key="frame" x="-5" y="-9" width="347" height="577"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDP-zC-6Xi">
-                    <rect key="frame" x="8" y="8" width="73" height="49"/>
-                    <state key="normal" title="Back">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLJ-i5-0DH">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3v-eo-c2t">
+                            <rect key="frame" x="127" y="32" width="66" height="24"/>
+                            <fontDescription key="fontDescription" name="Machinato-Light" family="Machinato" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrM-f0-ivH">
+                            <rect key="frame" x="0.0" y="23" width="41" height="41"/>
+                            <state key="normal" image="btn_back">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="udI-iA-Wim"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.17254901959999999" green="0.27058823529999998" blue="0.33725490200000002" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="      username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJ2-Zl-UMQ">
+                    <rect key="frame" x="0.0" y="84" width="322" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="18"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvi-Wr-auK">
+                    <rect key="frame" x="46" y="203" width="244" height="55"/>
+                    <state key="normal" image="btn_bg_login">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="J25-hm-NYq"/>
+                        <action selector="loginButton:" destination="-1" eventType="touchUpInside" id="7wT-h7-w1Y"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="      password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QZG-Jg-EBP">
+                    <rect key="frame" x="-1" y="146" width="322" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKj-gj-8cc">
+                    <rect key="frame" x="137" y="218" width="63" height="26"/>
+                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -33,5 +85,7 @@
     </objects>
     <resources>
         <image name="bg_login" width="320" height="568"/>
+        <image name="btn_back" width="41" height="41"/>
+        <image name="btn_bg_login" width="244" height="55"/>
     </resources>
 </document>
