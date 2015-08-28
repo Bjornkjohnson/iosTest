@@ -80,8 +80,7 @@
     
     static NSString *cellIdentifier = @"ChatCell";
     self.cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    //ChatCell *cell = nil;
-
+    
     if (self.cell == nil)
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];

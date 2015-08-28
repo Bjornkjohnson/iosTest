@@ -38,7 +38,7 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"POST";
     
-    //NSString *credentials = @"username=SuperBoise&password=qwerty";
+    
     NSString *credentials = [NSString stringWithFormat:@"username=%@&password=%@", self.username.text, self.password.text];
     NSLog(@"%@",credentials);
     NSData *bodyCredentials = [credentials dataUsingEncoding:NSUTF8StringEncoding];
